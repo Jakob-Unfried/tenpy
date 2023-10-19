@@ -58,7 +58,7 @@ docbuild = [
     "pandoc",
     "sphinx_copybutton",
 ]
-all = ["tenpy[plot, io, test, extra, docbuild]"]
+all = ["old_tenpy_compiled[plot, io, test, extra, docbuild]"]
 
 
 [project.urls]
@@ -70,15 +70,15 @@ all = ["tenpy[plot, io, test, extra, docbuild]"]
 
 
 [project.scripts]
-tenpy-run = "tenpy:console_main"
+#tenpy-run = "tenpy:console_main"
 
 
 [tool.setuptools]
-packages = ["tenpy"]
+packages = ["old_tenpy_compiled"]
 
 
-[tool.setuptools.dynamic]
-version = {attr = "tenpy.__version__"}
+#[tool.setuptools.dynamic]
+#version = {attr = "tenpy.__version__"}
 
 
 [tool.pytest.ini_options]

@@ -62,7 +62,7 @@ def setup_cython_extension():
         # macros.append(('MKL_DIRECT_CALL', None))  # TODO: benchmark: helpfull?
 
     extensions = [
-        Extension("*", ["tenpy/linalg/*.pyx"],
+        Extension("*", ["old_tenpy_compiled/linalg/*.pyx"],
                   include_dirs=include_dirs,
                   libraries=libs,
                   library_dirs=lib_dirs,
