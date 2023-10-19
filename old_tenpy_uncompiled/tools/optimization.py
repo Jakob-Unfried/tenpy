@@ -304,8 +304,9 @@ def use_cython(func=None, replacement=None, check_doc=True):
                 have_cython_functions = True
                 compiled_with_MKL = _npc_helper.compiled_with_MKL
             except ImportError:
-                warnings.warn("Couldn't load compiled cython code. Code will run a bit slower.")
                 have_cython_functions = False
+            else:
+                warnings.warn("Compiled cython code was successfully loaded. This version should be uncompiled, though.")
         else:
             have_cython_functions = False
     if not have_cython_functions:
